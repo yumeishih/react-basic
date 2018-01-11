@@ -8,11 +8,13 @@ export default class Layout extends React.Component {
         */
     }
   render() {
+    const { router } =this.props;
+    console.log(router.isActive("archives"));
     return (
         <div>
             <h1>KillerNews.net</h1>
             {this.props.children}
-            <Link to="archives" class="btn">archives</Link>
+            <Link to="archives" activeClassName="test" class="btn">archives</Link>
             <Link to="settings" class="btn">settings</Link>
             <button class = "btn" onClick = {this.navigate.bind(this)}>featured</button>
         </div>
