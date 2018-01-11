@@ -1,5 +1,9 @@
 import React from "react";
-import { Link } from "react-router"
+import { Link } from "react-router";
+
+import Footer from "../compomnents/layout/Footer";
+import Nav from "../compomnents/layout/Nav";
+
 export default class Layout extends React.Component {
     navigate() {
         this.props.router.push("/");
@@ -9,14 +13,24 @@ export default class Layout extends React.Component {
     }
   render() {
     const { router } =this.props;
+    const { location } = this.props;
+    const containerStyle = {
+        marginTop: "60px"
+    };
+    console.log("layout");
     console.log(router.isActive("archives"));
     return (
         <div>
-            <h1>KillerNews.net</h1>
-            {this.props.children}
-            <Link to="archives" activeClassName="test" class="btn">archives</Link>
-            <Link to="settings" class="btn">settings</Link>
-            <button class = "btn" onClick = {this.navigate.bind(this)}>featured</button>
+            <Nav location={location} />
+            <div class="container" style={containerStyle}>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>KillerNews.net</h1>
+                        {this.props.children}
+                    </div>
+                </div>
+                <Footer />
+            </div>
         </div>
     );
   }
