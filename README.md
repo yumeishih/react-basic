@@ -1,6 +1,6 @@
 # react-basic
-> Simple practice about ReactJS.
-> TUTORIAL: https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
+##### Simple practice about ReactJS.
+##### TUTORIAL: https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b
 ---
 Init and install package
 ```sh
