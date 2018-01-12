@@ -8,17 +8,12 @@ export default class Featured extends React.Component {
       "Some Article",
       "Some Other Article",
       "Yet Another Article",
-      "Still More",
-      "Some Article",
-      "Some Other Article",
-      "Yet Another Article",
-      "Still More",
-      "Some Article",
-      "Some Other Article",
-      "Yet Another Article",
-      "Still More",
+      "Still More"
     ].map((title, i) => <Article key={i} title={title}/> );
-
+    /*
+    Learning Node:
+    map() with i can generate Serial number (which is good to become key)
+    */
     const adText = [
       "Ad spot #1",
       "Ad spot #2",
@@ -28,6 +23,10 @@ export default class Featured extends React.Component {
     ];
 
     const randomAd = adText[Math.round( Math.random() * (adText.length-1) )];
+    /*
+    Learing Node:
+    Math.random() without params means between 0~1
+    */
     console.log("featured");
     return (
       <div>
