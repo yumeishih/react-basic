@@ -10,3 +10,14 @@ Start the server with webpack(`localhost:8080`)
 ```sh
 $ npm run dev
 ```
+
+```flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
